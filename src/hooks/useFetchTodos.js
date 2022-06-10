@@ -21,7 +21,7 @@ export const useFetchTodos = () => {
       const { data } = await todoApi.post('', todo);
       toast({
         title: 'Todo Created',
-        description: JSON.stringify(data, 0),
+        // description: JSON.stringify(data, 0),
         position: 'top-right',
         variant: 'left-accent',
         status: 'success',
@@ -44,7 +44,7 @@ export const useFetchTodos = () => {
       const { data } = await todoApi.put(`/${todo.id}`, todo);
       toast({
         title: 'Todo Updated',
-        description: JSON.stringify(data, 0),
+        // description: JSON.stringify(data, 0),
         position: 'top-right',
         variant: 'left-accent',
         status: 'info',
@@ -78,7 +78,7 @@ export const useFetchTodos = () => {
       const { data } = await todoApi.delete(`/${id}`);
       toast({
         title: `Todo with ID: ${id} Deleted`,
-        description: JSON.stringify(data, 0),
+        // description: JSON.stringify(data, 0),
         position: 'top-right',
         variant: 'left-accent',
         status: 'error',
