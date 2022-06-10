@@ -2,6 +2,18 @@
 
 This challenge will test your frontend skills.
 
+# Development Intructions
+
+To run the app in a local environment just need to have the next:
+
+- Install node
+- Clone the repo
+- In the proyect folder exec:
+    - npm install
+    - npm start
+- Navigate to http://localhost:3000
+- Test the app
+
 # Purpose
 Aim of this test is three fold,
 
