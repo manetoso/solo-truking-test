@@ -53,7 +53,20 @@ export const useFetchTodos = () => {
       });
       // DISPACH THE UPDATE TODO UI METHOD
       dispatch(finishEditingATodoTo(data))
-    } catch (error) {}
+    } catch (error) {
+      console.log(error.response.data);
+      toast({
+        title: 'Todo Updated',
+        description: JSON.stringify(todo, 0),
+        position: 'top-right',
+        variant: 'left-accent',
+        status: 'info',
+        duration: 9000,
+        isClosable: true,
+      });
+      // DISPACH THE UPDATE TODO UI METHOD IS IN THE ERRO BECAUSE THE API FALLS BACK --- CHECK THE CONSOLE
+      dispatch(finishEditingATodoTo(todo))
+    }
     // STOPS LOADING
     setIsLoading(false);
   };

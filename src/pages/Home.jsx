@@ -59,6 +59,10 @@ export const Home = () => {
         <Heading textTransform="uppercase">simple todo-list</Heading>
         <Flex flexDir="column" gap="2" w="100%">
           <Text color="accent.100" textAlign='end'>Developed by Emmanuel Cortes</Text>
+          <Text color="accent.100" textAlign='end'>
+            There is a bug on the api, that just create a todo with the ID: 101, and dont update that todo, I handle the update method but not the created
+            method because I relise about this bug at the end.
+          </Text>
           <Text color="accent.100">Tasks</Text>
           {/* RENDERING CONDITIONALLY THE TODO-LIST AND THE LOADING SKELETON COMPONENT */}
           {checking ? <CustomSkeleton /> : <TodoList />}
